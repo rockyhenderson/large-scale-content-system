@@ -1,22 +1,22 @@
-const products = [
-  { name: "Ham", price: 50, image: "ham.jpg" },
-  { name: "Pork", price: 30, image: "pork.jpg" },
-  { name: "Beef", price: 70, image: "veal.jpg" },
-  { name: "Mutton", price: 20, image: "mutton.jpg" },
-  { name: "Pollutry", price: 15, image: "pollutry.jpg" },
-  { name: "Chevon", price: 65, image: "chevon.jpg" },
-  { name: "Venison", price: 45, image: "venison.jpg" },
-  { name: "Lamb", price: 30, image: "lamb.jpg" },
-  { name: "Game", price: 5, image: "game.jpg" },
-  { name: "Exotic", price: 100, image: "exotic.jpg" },
-  { name: "Organ", price: 80, image: "organ.jpg" },
-  { name: "Processed", price: 10, image: "processed.jpg" },
-  { name: "Deli", price: 25, image: "deli.jpg" },
-  { name: "Bison", price: 25, image: "bison.jpg" },
-];
+$(document).ready(function(){
+  $.ajax({
+    url: '/data/data.json',
+    type: 'GET',
+    dataType: 'json',
+    success: function (data){
+      products = data;
+      //thank fuck this works
+      createDiv()
+    },
+    error: function(error){
+      console.log('Error loading the JSON File')
+    }
+  })
 
-$(document).ready(createDiv);
 
+
+});
+  
 
 function SortByPrice() { //initilize function
     products.sort((a, b) => a.price - b.price); //sorts by price :)
