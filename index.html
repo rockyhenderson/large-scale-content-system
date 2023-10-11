@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>SortingSystemMk1</title>
+  </head>
+  <body>
+    <h1>Sorting System Mk2</h1>
+      <form onsubmit="updateProductList(); return false;">
+        <input type="text" id="search-input" />
+        <button class="input-button" type="submit">Search</button>
+        <button onclick="SortByPrice()">Sort by price</button>
+      <button onclick="SortByName()">Sort by Alphabetic</button>
+      </form>
+      <main>
+        <div id="productList">
+          <!-- will be FILLED -->
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
