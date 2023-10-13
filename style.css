@@ -51,3 +51,31 @@ button{
         max-width: 326px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.content-row{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: hotpink;
+    width:70vw;
+    margin:auto;
+    height:400px;
+}
+.main-product{
+    background-color: green;
+    width:25%;
+}
+.sub-product{
+    background-color: red;
+    width:20%;
+}
